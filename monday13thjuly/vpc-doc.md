@@ -23,7 +23,7 @@ The purpose of the task was mainly to understand how a custom VPC is designed an
 
 ## Planned architecture
 
-![Custom VPC architecture](assets/vpcsetup.png)
+![Custom VPC architecture](./images/vpcsetup.png)
 
 The application VM is placed in the public subnet because users need to access it through the internet.
 
@@ -66,7 +66,7 @@ The VPC uses the following IPv4 CIDR block:
 10.0.0.0/16
 ```
 
-![Created custom VPC](assets/createdvpc.png)
+![Created custom VPC](./images/createdvpc.png)
 
 The screenshot shows that the VPC was created successfully and is in the `Available` state.
 
@@ -82,7 +82,7 @@ CIDR block: 10.0.2.0/24
 Availability Zone: eu-west-1a
 ```
 
-![Public subnet](assets/publicsubnet.png)
+![Public subnet](./images/publicsubnet.png)
 
 This subnet is used for the application VM because the application needs to be reachable from the internet.
 
@@ -98,7 +98,7 @@ CIDR block: 10.0.3.0/24
 Availability Zone: eu-west-1b
 ```
 
-![Private subnet](assets/privatesubnet.png)
+![Private subnet](./images/privatesubnet.png)
 
 This subnet is private and is used for the database VM. The database is not directly exposed to the internet.
 
@@ -108,7 +108,7 @@ This subnet is private and is used for the database VM. The database is not dire
 
 I created an Internet Gateway and attached it to my custom VPC.
 
-![Internet Gateway attached](assets/created-attached-internetgateway.png)
+![Internet Gateway attached](./images/created-attached-internetgateway.png)
 
 The Internet Gateway provides a path between the internet and resources inside the public subnet.
 
@@ -123,7 +123,7 @@ I created a public route table and added the following routes:
 0.0.0.0/0 → Internet Gateway
 ```
 
-![Public route table](assets/public-routetable.png)
+![Public route table](./images/public-routetable.png)
 
 The `0.0.0.0/0` route sends internet traffic through the Internet Gateway.
 
@@ -139,7 +139,7 @@ The private route table contains only the local route:
 10.0.0.0/16 → local
 ```
 
-![Private route table](assets/private-routetable.png)
+![Private route table](./images/private-routetable.png)
 
 Because it has no route to the Internet Gateway, resources in the private subnet are not directly accessible from the internet.
 
@@ -244,7 +244,7 @@ Possible future improvements include:
 
 # Supporting VPC analogy
 
-![Custom VPC apartment analogy](assets/apartment.png)
+![Custom VPC apartment analogy](./images/apartment.png)
 
 The Region can be compared to an apartment building, the VPC to an apartment layout, and the subnets to separate rooms.
 
