@@ -1,5 +1,28 @@
 # AWS Custom VPC – Two-Tier Deployment
 
+- [AWS Custom VPC – Two-Tier Deployment](#aws-custom-vpc--two-tier-deployment)
+  - [Project overview](#project-overview)
+- [Plan](#plan)
+  - [Planned architecture](#planned-architecture)
+  - [Planned steps](#planned-steps)
+- [Implementation](#implementation)
+  - [1. Created the custom VPC](#1-created-the-custom-vpc)
+  - [2. Created the public subnet](#2-created-the-public-subnet)
+  - [3. Created the private subnet](#3-created-the-private-subnet)
+  - [4. Created and attached an Internet Gateway](#4-created-and-attached-an-internet-gateway)
+  - [5. Configured the public route table](#5-configured-the-public-route-table)
+  - [6. Kept the database subnet private](#6-kept-the-database-subnet-private)
+  - [7. Created the security groups](#7-created-the-security-groups)
+    - [Application security group](#application-security-group)
+    - [Database security group](#database-security-group)
+  - [8. Launched the database VM](#8-launched-the-database-vm)
+  - [9. Launched the application VM](#9-launched-the-application-vm)
+- [Result](#result)
+- [MVP and future iterations](#mvp-and-future-iterations)
+- [Supporting VPC analogy](#supporting-vpc-analogy)
+
+
+
 ## Project overview
 
 This project documents the creation of a custom AWS VPC for a simple two-tier application.
