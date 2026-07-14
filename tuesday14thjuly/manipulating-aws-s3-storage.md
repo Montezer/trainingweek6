@@ -74,7 +74,7 @@ Important S3 features include:
 
 ## Prerequisites
 
-Before starting, you need:
+Before starting, we need:
 
 - A running EC2 instance
 - SSH access to the EC2 instance
