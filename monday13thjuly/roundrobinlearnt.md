@@ -1,0 +1,1 @@
+I learned about the difference between monolithic and 2 tier architecture 
